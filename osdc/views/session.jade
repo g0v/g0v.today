@@ -6,12 +6,17 @@ block title
 block body
 
   section#session(ng-show="view=='session'")
-    .break
-      .ui.label.white 9:00 - 9:40
-    nav.ui.fluid.three.item.menu
-      a.item 第一會議室
-      a.item.active 國際會議廳
-      a.item 第二會議室
+    .ui.fluid.one.item.menu
+      .ui.dropdown.item 9:00 - 9:40
+        i.icon.dropdown
+        .menu
+          a.item 9:00 - 9:40
+          a.item 9:50 - 10:20
+          a.item 10:30 - 11:20
+    nav.ui.fluid.three.item.inverted.menu
+      a.item.disabled 第一會議室
+      a.item.active 國際會議廳 (聯播)
+      a.item.disabled 第二會議室
     article.video
       .ui.top.right.attached.red.label live
     article.info
