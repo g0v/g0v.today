@@ -22,23 +22,25 @@ a, a:link {
   color: inherit;
 }
 
-.ui.button.black.active {
-  background-color: #5c6166;
-  color: white;
+.ui.menu .item > .label {
+  vertical-align: middle;
+  margin-top: -0.3em;
 }
 
-.ui.menu .item .avatar, .ui.button .avatar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: -0.5rem 0.5rem -0.5rem 0;
+#wrapper {
+  max-width: 480px;
 }
 
-.ui.label.white {
-  background: none;
+.break {
+  text-align: center;
 }
-
-.ui.menu .item .ui.label {
-  vertical-align: inherit;
-  margin: -0.3em 0 -0.3em 0.5em;
+.break .count {
+  padding-right: 0.5em;
+}
+.break .count .number {
+  font-size: 150%;
+  padding: 0 0.5em;
+}
+.break .count .unit {
+  font-size: 1rem;
 }

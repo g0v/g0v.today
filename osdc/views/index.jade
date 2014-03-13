@@ -1,18 +1,73 @@
 extends _template
 
 block title
-  | 首頁
 
 block body
 
-  #login
-    p login as
-    .ui.icon.labeled.button facebook
-      i.icon.facebook
-    .ui.icon.labeled.button google
-      i.icon.google
-    .ui.icon.labeled.button twitter
-      i.icon.twitter
+  #wrapper(ng-init="view='home'")
+
+    #navbar
+      .ui.menu.inverted
+        .ui.dropdown.item.home OSDC 2014
+          i.icon.dropdown
+          .menu
+            a.item(ng-click="view='home'") 即時動態
+            a.item(ng-click="view='chat'") irc 聊天室
+            a.item(ng-click="view='note'") hackapd 議程共筆
+            a.item(ng-click="view='seat'") google docs 座位表
+            a.item(ng-click="view='plan'") 會場平面圖
+            a.item(ng-click="view='twitter'") 推特牆
+            a.item(ng-click="view='photo'") 照片集
+        a.item(ng-click="view='location'") 地點
+          i.icon.map.marker
+        .right.menu
+          .ui.dropdown.item 登入
+            i.icon.dropdown
+            .menu
+              a.item
+                i.icon.google.plus
+                | google
+              a.item
+                i.icon.twitter
+                | twitter
+              a.item
+                i.icon.facebook
+                | facebook
+          //-.ui.icon.input
+            input(type="text",placeholder="搜尋...",ng-model="keyword")
+            i.search.link.icon
+
+    #home(ng-show="view=='home'")
+
+      .ui.fluid.two.item.menu.teal
+        a.item.active 4/11 Fri.
+          .ui.label.orange today
+        a.item 4/12 Sat.
+      .break
+        p 議程將於
+          span.count
+            span.number 1
+            span.unit hr
+            span.number 30
+            span.unit mins
+          | 後開始
+
+
+
+
+
+
+    #chat(ng-show="view=='chat'")
+    #note(ng-show="view=='note'")
+    #seat(ng-show="view=='seat'")
+    #plan(ng-show="view=='plan'")
+    #twitter(ng-show="view=='twitter'")
+    #photo(ng-show="view=='photo'")
+    #location(ng-show="view=='location'")
+
+    #footer
+      #broadcast 大會廣播
+      #sponsor 贊助輪播
 
 
 block script

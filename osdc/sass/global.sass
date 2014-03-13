@@ -18,21 +18,23 @@ a,a:link
   text-decoration: none
   color: inherit
 
-// patch semantic ui black active button bug
-.ui.button.black.active
-  background-color: #5C6166
-  color: #FFF
+// fix semantic ui label position in menu
+.ui.menu
+  .item>.label
+    vertical-align: middle
+    margin-top: -0.3em
 
-// make semantic ui avatar images fit in menu and buttons
-.ui.menu .item, .ui.button
-  .avatar
-    +box-sizing(border-box)
-    margin: -0.5rem 0.5rem -0.5rem 0
+// layout
+#wrapper
+  max-width: 480px
 
-// add a custom color of label
-.ui.label.white
-  background: none
+.break
+  text-align: center
+  .count
+    padding-right: 0.5em
+    .number
+      font-size: 150%
+      padding: 0 0.5em
+    .unit
+      font-size: 1rem
 
-.ui.menu .item .ui.label
-  vertical-align: inherit
-  margin: -0.3em 0 -0.3em 0.5em
