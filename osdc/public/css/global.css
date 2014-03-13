@@ -1,0 +1,44 @@
+html {
+  font-size: 18px;
+  font-family: "微軟正黑體", sans-serif;
+  color: #333333;
+}
+
+html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a, a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui.button.black.active {
+  background-color: #5c6166;
+  color: white;
+}
+
+.ui.menu .item .avatar, .ui.button .avatar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: -0.5rem 0.5rem -0.5rem 0;
+}
+
+.ui.label.white {
+  background: none;
+}
+
+.ui.menu .item .ui.label {
+  vertical-align: inherit;
+  margin: -0.3em 0 -0.3em 0.5em;
+}

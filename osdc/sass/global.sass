@@ -1,0 +1,38 @@
+@import compass/css3
+
+html
+  font-size: 18px
+  font-family: '微軟正黑體', sans-serif
+  color: #333
+
+html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
+  margin: 0
+  padding: 0
+  line-height: 1em
+  +box-sizing(border-box)
+
+p
+  line-height: 1.5em
+
+a,a:link
+  text-decoration: none
+  color: inherit
+
+// patch semantic ui black active button bug
+.ui.button.black.active
+  background-color: #5C6166
+  color: #FFF
+
+// make semantic ui avatar images fit in menu and buttons
+.ui.menu .item, .ui.button
+  .avatar
+    +box-sizing(border-box)
+    margin: -0.5rem 0.5rem -0.5rem 0
+
+// add a custom color of label
+.ui.label.white
+  background: none
+
+.ui.menu .item .ui.label
+  vertical-align: inherit
+  margin: -0.3em 0 -0.3em 0.5em

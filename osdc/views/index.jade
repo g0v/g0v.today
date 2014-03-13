@@ -1,0 +1,21 @@
+extends _template
+
+block title
+  | 首頁
+
+block body
+
+  #login
+    p login as
+    .ui.icon.labeled.button facebook
+      i.icon.facebook
+    .ui.icon.labeled.button google
+      i.icon.google
+    .ui.icon.labeled.button twitter
+      i.icon.twitter
+
+
+block script
+  //-script.
+    $("#navbar .home").addClass("active");
+    $("#sidebar .all").addClass("active");
