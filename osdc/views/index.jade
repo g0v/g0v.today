@@ -5,189 +5,114 @@ block title
 
 block body
 
-  #wrapper(ng-init="view='home'")
+  section#home(ng-show="view=='home'")
 
-    nav#navbar
-      .ui.menu.inverted
-        .ui.dropdown.item.home OSDC 2014
-          i.icon.dropdown
-          .menu
-            a.item(ng-click="view='home'") OSDC 2014
-            a.item(ng-click="view='chat'") 聊天室
-            a.item(ng-click="view='note'") 議程共筆
-            a.item(ng-click="view='seat'") 座位表
-            a.item(ng-click="view='plan'") 會場平面圖
-            a.item(ng-click="view='twitter'") 推特牆
-            a.item(ng-click="view='photo'") 照片集
-            a.item(ng-click="view='about'") 關於
-        a.item(ng-click="view='location'") 地點
-          i.icon.map.marker
-        .right.menu
-          .ui.dropdown.item 登入
-            i.icon.dropdown
-            .menu
-              a.item
-                i.icon.google.plus
-                | google
-              a.item
-                i.icon.twitter
-                | twitter
-              a.item
-                i.icon.facebook
-                | facebook
-          //-.ui.icon.input
-            input(type="text",placeholder="搜尋...",ng-model="keyword")
-            i.search.link.icon
-
-    section#home(ng-show="view=='home'")
-
-      nav.ui.fluid.two.item.menu.teal
-        a.item.active 4/11 Fri.
-          .ui.label.orange today
-        a.item 4/12 Sat.
-
-      #schedule
-        .break
-          .current 議程將於
-            span.count
-              span.number 1
-              span.unit hr
-              span.number 30
-              span.unit mins
-            | 後開始
-        .ui.one.column.grid
-          .equal.height.row
-            .column
-              .ui.segment.orange.session.wide
-                a.ui.top.right.attached.label.white(href="room-1")
-                  i.icon.location
-                  | 國際會議廳 (全場聯播)
-                .ui.top.left.attached.label.white 9:00 - 9:40
-                a.ui.image(href="au")
-                  img(src="https://pbs.twimg.com/profile_images/2470383529/j0zbmgx23s764kudejpp.jpeg")
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-        .break
-          .ui.label.white 9:40 - 9:50 break
-          .current.hidden 議程將於
-            span.count
-              span.number 10
-              span.unit mins
-            | 後開始
-        .ui.three.column.grid
-          .equal.height.row
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-2")
-                  i.icon.location
-                  | 第一會議室
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-1")
-                  i.icon.location
-                  | 國際會議廳
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-3")
-                  i.icon.location
-                  | 第二會議室
-        .break
-          .ui.label.white 9:40 - 9:50 break
-          .current.hidden 議程將於
-            span.count
-              span.number 10
-              span.unit mins
-            | 後開始
-        .ui.three.column.grid
-          .equal.height.row
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-2")
-                  i.icon.location
-                  | 第一會議室
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-1")
-                  i.icon.location
-                  | 國際會議廳
-            .column
-              .ui.segment.session.narrow
-                .ui.top.left.attached.label.white 9:50 - 10:20
-                h3: a.topic(href="session-1") 零時政府的第一年
-                a.speaker(href="au") Audrey
-                a.ui.bottom.attached.label.white(href="room-3")
-                  i.icon.location
-                  | 第二會議室
-        .break
-          .ui.label.white 18:00 Day 1 結束
+    #schedule
+      .break
+        .current 議程將於
+          span.count
+            span.number 1
+            span.unit hr
+            span.number 30
+            span.unit mins
+          | 後開始
+      .ui.one.column.grid
+        .equal.height.row
+          .column
+            .ui.segment.orange.session.wide
+              a.ui.top.right.attached.label.white(href="room-1")
+                i.icon.location
+                | 國際會議廳 (全場聯播)
+              .ui.top.left.attached.label.white 9:00 - 9:40
+              a.ui.image(href="au")
+                img(src="https://pbs.twimg.com/profile_images/2470383529/j0zbmgx23s764kudejpp.jpeg")
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+      .break
+        .ui.label.white 9:40 - 9:50 break
+        .current.hidden 議程將於
+          span.count
+            span.number 10
+            span.unit mins
+          | 後開始
+      .ui.three.column.grid
+        .equal.height.row
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-2")
+                i.icon.location
+                | 第一會議室
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-1")
+                i.icon.location
+                | 國際會議廳
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-3")
+                i.icon.location
+                | 第二會議室
+      .break
+        .ui.label.white 9:40 - 9:50 break
+        .current.hidden 議程將於
+          span.count
+            span.number 10
+            span.unit mins
+          | 後開始
+      .ui.three.column.grid
+        .equal.height.row
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-2")
+                i.icon.location
+                | 第一會議室
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-1")
+                i.icon.location
+                | 國際會議廳
+          .column
+            .ui.segment.session.narrow
+              .ui.top.left.attached.label.white 9:50 - 10:20
+              h3: a.topic(href="session.html") 零時政府的第一年
+              a.speaker(href="au") Audrey
+              a.ui.bottom.attached.label.white(href="room-3")
+                i.icon.location
+                | 第二會議室
+      .break
+        .ui.label.white 18:00 Day 1 結束
 
 
-    section#chat(ng-show="view=='chat'")
-    section#note(ng-show="view=='note'")
-    section#seat(ng-show="view=='seat'")
-    section#plan(ng-show="view=='plan'")
-    section#twitter(ng-show="view=='twitter'")
-    section#photo(ng-show="view=='photo'")
-    section#location(ng-show="view=='location'")
-    section#session(ng-show="view=='session'")
-      //.ui.fluid.five.item.menu
-        a.item 投影片
-        a.item 共筆
-        a.item 座位表
-        a.item 會場位置
-        a.item 照片集
+  section#chat(ng-show="view=='chat'")
+  section#note(ng-show="view=='note'")
+  section#seat(ng-show="view=='seat'")
+  section#plan(ng-show="view=='plan'")
+  section#twitter(ng-show="view=='twitter'")
+  section#photo(ng-show="view=='photo'")
+  section#location(ng-show="view=='location'")
+  section#session(ng-show="view=='session'")
+    //.ui.fluid.five.item.menu
+      a.item 投影片
+      a.item 共筆
+      a.item 座位表
+      a.item 會場位置
+      a.item 照片集
 
-
-    footer#footer
-      #broadcast.ui.menu.teal.inverted
-        .ui.dropdown.item
-          .ui.label 4/11 Fri. 13:30 大會廣播
-          | 誰在第二會議室遺失電源線，請到報到櫃臺認領
-          .menu
-            a.item
-              .ui.label 4/11 Fri. 13:30 大會廣播
-              | 誰在第二會議室遺失電源線，請到報到櫃臺認領
-            a.item
-              .ui.label 4/12 Sat. 15:30 大會廣播
-              | SSID g0v.today 求壓力測試
-      #sponsor.ui.menu.inverted
-        .ui.dropdown.item
-          .ui.label 外星級贊助
-          | KKTIX 售票亭，舉辦活動的好幫手
-          .menu
-            a.item
-              .ui.label 外星級贊助
-              | KKTIX 售票亭，舉辦活動的好幫手
-              span.more
-                i.icon.right.arrow
-                | 會場攤位
-            a.item
-              .ui.label 魔法級贊助
-              | g0v.tw 零時政府，先承認你就是沒有人啦啦啦啦啦
-              span.more
-                i.icon.right.arrow
-                | 網站
-            a.item
-              .ui.label 英雄級贊助
-              | 中央研究院自由軟體鑄造廠
-              span.more
-                i.icon.right.arrow
-                | 徵才訊息
 
 
 block script

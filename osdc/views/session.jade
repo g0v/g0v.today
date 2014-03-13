@@ -1,0 +1,28 @@
+extends _template
+
+block title
+  | OSDC 2014
+
+block body
+
+  section#session(ng-show="view=='session'")
+    .ui.fluid.five.item.menu
+      a.item 投影片
+      a.item 共筆
+      a.item 座位表
+      a.item 會場位置
+      a.item 照片集
+
+
+  section#chat(ng-show="view=='chat'")
+  section#note(ng-show="view=='note'")
+  section#seat(ng-show="view=='seat'")
+  section#plan(ng-show="view=='plan'")
+  section#twitter(ng-show="view=='twitter'")
+  section#photo(ng-show="view=='photo'")
+  section#location(ng-show="view=='location'")
+
+block script
+  //-script.
+    $("#navbar .home").addClass("active");
+    $("#sidebar .all").addClass("active");
