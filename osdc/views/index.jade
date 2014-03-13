@@ -154,12 +154,40 @@ block body
 
 
     footer#footer
-      .ui.two.column.grid
-        .equal.height.row
-          .column
-            .ui.segment#sponsor 贊助輪播
-          .column
-            .ui.segment#broadcast 大會廣播
+      #broadcast.ui.menu.teal.inverted
+        .ui.dropdown.item
+          .ui.label 4/11 Fri. 13:30 大會廣播
+          | 誰在第二會議室遺失電源線，請到報到櫃臺認領
+          .menu
+            a.item
+              .ui.label 4/11 Fri. 13:30 大會廣播
+              | 誰在第二會議室遺失電源線，請到報到櫃臺認領
+            a.item
+              .ui.label 4/12 Sat. 15:30 大會廣播
+              | SSID g0v.today 求壓力測試
+      #sponsor.ui.menu.inverted
+        .ui.dropdown.item
+          .ui.label 外星級贊助
+          | KKTIX 售票亭，舉辦活動的好幫手
+          .menu
+            a.item
+              .ui.label 外星級贊助
+              | KKTIX 售票亭，舉辦活動的好幫手
+              span.more
+                i.icon.right.arrow
+                | 會場攤位
+            a.item
+              .ui.label 魔法級贊助
+              | g0v.tw 零時政府，先承認你就是沒有人啦啦啦啦啦
+              span.more
+                i.icon.right.arrow
+                | 網站
+            a.item
+              .ui.label 英雄級贊助
+              | 中央研究院自由軟體鑄造廠
+              span.more
+                i.icon.right.arrow
+                | 徵才訊息
 
 
 block script
