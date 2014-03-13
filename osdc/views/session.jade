@@ -7,13 +7,28 @@ block body
 
   section#session(ng-show="view=='session'")
     .break
-    .ui.fluid.five.item.menu
+      .ui.label.white 9:00 - 9:40
+    nav.ui.fluid.three.item.menu
+      a.item 第一會議室
+      a.item.active 國際會議廳
+      a.item 第二會議室
+    article.video
+      .ui.top.right.attached.red.label live
+    article.info
+      h2.title 零時政府的第一年
+      .ui.image(href="au")
+        img(src="https://pbs.twimg.com/profile_images/2470383529/j0zbmgx23s764kudejpp.jpeg")
+      h3.speaker Audrey
+      p Untitled Page @ Socialtext; Consultant @ Apple; Member @ g0v
+      p A self-educated programmer and translator, Audrey is responsible for the MoeDict and EtherCalc services, and has served in language design committees for Haskell, Perl 5, and Perl 6.
+
+    .ui.fluid.three.item.menu
       a.item 投影片
       a.item 共筆
       a.item 座位表
+    .ui.fluid.two.item.menu
       a.item 會場位置
-      a.item 照片集
-
+      a.item.disabled 照片集
 
   section#chat(ng-show="view=='chat'")
   section#note(ng-show="view=='note'")

@@ -64,19 +64,6 @@ a, a:link {
 #schedule .session.narrow h3 {
   margin: 0;
 }
-#schedule .session .ui.image {
-  width: 3rem;
-  height: 3rem;
-  float: left;
-  margin: 0 1rem 0.5rem 0;
-}
-#schedule .session .ui.image img {
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
-  border-radius: 0.3rem;
-}
 #schedule .session .topic, #schedule .session .speaker {
   padding: 0.5rem 0;
   display: block;
@@ -89,22 +76,37 @@ a, a:link {
 #schedule .session .topic:hover, #schedule .session .speaker:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-#schedule .break {
+
+.ui.image {
+  width: 3rem;
+  height: 3rem;
+  float: left;
+  margin: 0 1rem 0.5rem 0;
+}
+.ui.image img {
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.break {
   background-color: rgba(0, 0, 0, 0.03);
   text-align: center;
 }
-#schedule .break .current {
+.break .current {
   padding: 1rem;
 }
-#schedule .break .count {
+.break .count {
   padding-right: 0.5em;
 }
-#schedule .break .count .number {
+.break .count .number {
   font-size: 150%;
   padding: 0 0.5em;
   color: #d95c5c;
 }
-#schedule .break .count .unit {
+.break .count .unit {
   font-size: 1rem;
 }
 
@@ -120,4 +122,16 @@ a, a:link {
 }
 #broadcast .item .more, #sponsor .item .more {
   float: right;
+}
+
+#session .video {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 320px;
+  position: relative;
+}
+#session .info {
+  padding: 1rem 1rem 0 1rem;
+}
+#session .info .title {
+  margin-bottom: 1rem;
 }
