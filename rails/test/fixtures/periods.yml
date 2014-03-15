@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-03-15
+  start: 2014-03-15 07:01:36
+  is_talk: false
+  description: MyString
+
+two:
+  date: 2014-03-15
+  start: 2014-03-15 07:01:36
+  is_talk: false
+  description: MyString

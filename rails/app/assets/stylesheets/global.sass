@@ -1,0 +1,106 @@
+@import compass/css3
+
+html
+  font-size: 18px
+  font-family: '微軟正黑體', sans-serif
+  color: #333
+
+html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
+  margin: 0
+  padding: 0
+  line-height: 1em
+  +box-sizing(border-box)
+
+p
+  line-height: 1.5em
+
+a,a:link
+  text-decoration: none
+  color: inherit
+
+.hidden
+  display: none
+
+// fix semantic ui label position in menu
+.ui.menu
+  margin: 0
+  .item>.label
+    vertical-align: middle
+    margin-top: -0.3em
+
+.ui.label.white
+  background: none
+
+.ui.grid
+  margin: 0
+  padding: 0
+  .row
+    margin: 0
+    padding: 0
+    .column
+      padding: 0
+      margin: 0
+
+// layout
+#wrapper
+  max-width: 480px
+
+.ui.image
+  width: 3rem
+  height: 3rem
+  float: left
+  margin: 0 1rem 0.5rem 0
+  img
+    +border-radius(0.3rem)
+
+#schedule
+
+  .session
+    &.wide
+      padding: 2rem 1rem 0.5rem 1rem
+    &.narrow
+      padding: 2rem 1rem
+      h3
+        margin: 0
+    .topic, .speaker
+      padding: 0.5rem 0
+      display: block
+      +border-radius(0.3rem)
+      &:hover
+        background-color: rgba(#000,0.05)
+
+  .break
+    background-color: rgba(#000,0.03)
+    text-align: center
+    .current
+      padding: 1rem
+    .count
+      padding-right: 0.5em
+      .number
+        font-size: 150%
+        padding: 0 0.5em
+        color: #D95C5C
+      .unit
+        font-size: 1rem
+
+#broadcast, #sponsor
+  .item
+    width: 100%
+    line-height: 1.5em
+    padding: 0.5em
+    white-space: normal
+    .ui.label
+      margin-left: 0
+      margin-right: 0.5em
+    .more
+      float: right
+
+#session
+  .video
+    background-color: rgba(#000,0.7)
+    height: 320px
+    position: relative
+  .info
+    padding: 1rem 1rem 0 1rem
+    .title
+      margin-bottom: 1rem

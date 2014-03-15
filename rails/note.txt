@@ -1,0 +1,15 @@
+rails generate scaffold speaker name:string title:string intro:text
+rake db:migrate
+rails generate scaffold room name:string location:string
+rake db:migrate
+rails generate scaffold period date:date start:time is_talk:boolean description:string
+rake db:migrate
+rails generate scaffold session topic:string description:text is_keynote:boolean is_panel:boolean
+rake db:migrate
+-------------progress-------------
+
+speaker:has_many period:belongs_to room:belongs_to
+
+
+--
+environments -> developments 

@@ -1,0 +1,114 @@
+== link_to 'Rooms', rooms_path
+== link_to 'Periods', periods_path
+== link_to 'Speakers', speakers_path
+== link_to 'Sessions', sessions_path
+
+section#home ng-show="view=='home'" 
+  #schedule
+    .break
+      .ui.label.white 8:30 - 9:00 報到
+      .current
+        | 議程將於
+        span.count
+          span.number 1
+          span.unit hr
+          span.number 30
+          span.unit mins
+        | 後開始
+    .ui.one.column.grid
+      .equal.height.row
+        .column
+          .ui.segment.orange.session.wide
+            a.ui.top.right.attached.label.white href="room-1" 
+              i.icon.location
+              | 國際會議廳 (全場聯播)
+            .ui.top.left.attached.label.white 9:00 - 9:40
+            a.ui.image href="au" 
+              img src="https://pbs.twimg.com/profile_images/2470383529/j0zbmgx23s764kudejpp.jpeg" /
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+    .break
+      .ui.label.white 9:40 - 9:50 break
+      .current.hidden
+        | 議程將於
+        span.count
+          span.number 10
+          span.unit mins
+        | 後開始
+    .ui.three.column.grid
+      .equal.height.row
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-2" 
+              i.icon.location
+              | 第一會議室
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-1" 
+              i.icon.location
+              | 國際會議廳
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-3" 
+              i.icon.location
+              | 第二會議室
+    .break
+      .ui.label.white 9:40 - 9:50 break
+      .current.hidden
+        | 議程將於
+        span.count
+          span.number 10
+          span.unit mins
+        | 後開始
+    .ui.three.column.grid
+      .equal.height.row
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-2" 
+              i.icon.location
+              | 第一會議室
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-1" 
+              i.icon.location
+              | 國際會議廳
+        .column
+          .ui.segment.session.narrow
+            .ui.top.left.attached.label.white 9:50 - 10:20
+            h3
+              a.topic href="session.html"  零時政府的第一年
+            a.speaker href="au"  Audrey
+            a.ui.bottom.attached.label.white href="room-3" 
+              i.icon.location
+              | 第二會議室
+    .break
+      .ui.label.white 18:00 Day 1 結束
+section#chat ng-show="view=='chat'" 
+section#note ng-show="view=='note'" 
+section#seat ng-show="view=='seat'" 
+section#plan ng-show="view=='plan'" 
+section#twitter ng-show="view=='twitter'" 
+section#photo ng-show="view=='photo'" 
+section#location ng-show="view=='location'" 
+section#session ng-show="view=='session'" 
